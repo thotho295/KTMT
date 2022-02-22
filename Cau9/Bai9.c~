@@ -1,0 +1,17 @@
+/*
+ * Bai9.c
+ *
+ * Created: 11/8/2021 12:28:08 PM
+ * Author: nguye
+ */
+
+#include <io.h>
+
+void main(void)
+{
+while (1)
+    {
+    // Please write your application code here
+
+    }
+}

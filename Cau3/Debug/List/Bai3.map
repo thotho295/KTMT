@@ -1,0 +1,26 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+LED4                                                                              0x0500      10
+LED3                                                                              0x050A      10
+LED2                                                                              0x0514      10
+LED1                                                                              0x051E      10
+LEDD                                                                              0x0528      10
+LEDA                                                                              0x0532      10
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+count                                                                             R4,R5        2
+r                                                                                 R6,R7        2
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+timer0_ovf_isr                                                                    0x000AC     14
+hienthi                                                                           0x000BA    135
+main                                                                              0x00141     41

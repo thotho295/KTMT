@@ -1,0 +1,55 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+dem3                                                                              0x0500       2
+buff                                                                              0x0502      16
+edit_mode                                                                         0x0512       2
+day                                                                               0x0514       1
+month                                                                             0x0515       1
+year                                                                              0x0516       1
+date                                                                              0x0517       1
+hour                                                                              0x0518       1
+minute                                                                            0x0519       1
+second                                                                            0x051A       1
+_base_y                                                                           0x051B       4
+_lcd_x                                                                            0x051F       1
+_lcd_y                                                                            0x0520       1
+_lcd_maxx                                                                         0x0521       1
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+choice                                                                            R4,R5        2
+tmp                                                                               R6,R7        2
+dem                                                                               R8,R9        2
+dem1                                                                              R10,R11      2
+dem2                                                                              R12,R13      2
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+timer0_ovf_isr                                                                    0x0009C    284
+main                                                                              0x001B8    313
+put_buff_G100                                                                     0x002F1     58
+_print_G100                                                                       0x0032B    308
+sprintf                                                                           0x0045F     52
+rtc_init                                                                          0x00493     25
+rtc_get_time                                                                      0x004AC     25
+rtc_set_time                                                                      0x004C5     13
+rtc_get_date                                                                      0x004D2     27
+rtc_set_date                                                                      0x004ED     17
+_lcd_write_nibble_G102                                                            0x004FE     37
+_lcd_write_data                                                                   0x00523     12
+lcd_gotoxy                                                                        0x0052F     17
+lcd_clear                                                                         0x00540     14
+lcd_putchar                                                                       0x0054E     32
+lcd_puts                                                                          0x0056E     17
+lcd_init                                                                          0x0057F     48
+strlen                                                                            0x005AF     12
+strlenf                                                                           0x005BB     13
+bcd2bin                                                                           0x005C8     13
+bin2bcd                                                                           0x005D5     10

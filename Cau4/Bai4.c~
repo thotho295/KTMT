@@ -1,0 +1,164 @@
+/*
+ * Bai5.c
+ *
+ * Created: 10/18/2021 10:19:58 AM
+ * Author: nguyen  
+ F 0-3-4-6 LED1-F0 LED2-F3 LED3-F4 LED4-F6
+ F1-a F5-b A7-c D1-d D2-e F2-f D3-g
+ Anot chung -> LED sang thitac dong muc logic 0
+ 0: abcdef PORTD = 0b0000 0000, PORTD = 0b0000 1000; PORTA = 0b0000 0000;
+ 1: bc PORTF = 0x84, PORTD =0x02, PORTA= 0x00; 
+ 2: abged  PORTF = 0b1000 0100, PORTD =0xF1, PORTA= 0xFF; 
+ 3: abgcd PORTF = 0b1000 0100, PORTD =0xF5, PORTA= 0x7F; 
+ 4: fgbc PORTF = 0b1000 0010, PORTD =0xF7, PORTA= 0x7F;  
+ 5: afgcd PORTF = 0b1010 0000, PORTD =0xF5, PORTA= 0x7F;  
+ 6: afgecd PORTF = 0b1010 0000, PORTD =0xFF, PORTA= 0x7F; 
+ 7: abc PORTF = 0b1000 0100, PORTD =0xFF, PORTA= 0x7F; 
+ 8: abcdefg PORTF = 0b1000 0000, PORTD =0xF1, PORTA= 0x7F; 
+ 9: abcdfg PORTF = 0b1000 0000, PORTD =0xF5, PORTA= 0x7F;
+ */
+
+#include <io.h>
+#include <delay.h>
+#define BT1 PINB.2
+
+//hien thi khong cam bam button
+/* void hienthi(){
+/// A-D binh thuong
+///E,F,G muon tac dong bit, ta phai tac dong ca thanh ghi
+
+    int i; 
+     for(i = 0; i <= 9 ; i++){ 
+         if(i==0){ 
+            PORTF = 0b10000000 + 0b00000001; 
+             PORTD = 0xF9;  // 1111 1001
+             PORTA = 0x7F;  // 0111 1111 
+         } 
+         if(i==1){ 
+            PORTF = 0b10000110 + 0b00000001; 
+            PORTD = 0xFF;     //1111 1111
+            PORTA = 0x7F;     //0111 1111
+         } 
+         if(i==2){ 
+             PORTF = 0b10000100 + 0b00000001; 
+             PORTD = 0xF1; 
+             PORTA = 0xFF; 
+         } 
+         if(i==3){ 
+            PORTF = 0b10000100 + 0b00000001; 
+             PORTD = 0xF5; 
+             PORTA = 0x7F; 
+         } 
+         if(i==4){ 
+            PORTF = 0b10000010 + 0b00000001; 
+             PORTD = 0xF7; 
+             PORTA = 0x7F; 
+         } 
+         if(i==5){
+            PORTF = 0b10100000 + 0b00000001; 
+             PORTD = 0xF5; 
+             PORTA = 0x7F; 
+         } 
+         if(i==6){ 
+             PORTF = 0b10100000 + 0b00000001;   
+             PORTD = 0xF1; 
+             PORTA = 0x7F; 
+         } 
+         if(i==7){ 
+             PORTF = 0b10000100 + 0b00000001; 
+             PORTD = 0xFF; 
+             PORTA = 0x7F; 
+         } 
+         if(i==8){ 
+             PORTF = 0b10000000 +0b00000001; 
+             PORTD = 0xF1; 
+             PORTA = 0x7F; 
+         } 
+         if(i==9){ 
+             PORTF = 0b10000000 + 0b00000001; 
+             PORTD = 0xF5; 
+             PORTA = 0x7F; 
+         } 
+         delay_ms(500); 
+         PORTF = 0xA6; 
+         PORTD = 0xFF; 
+         PORTA = 0xFF; 
+     }     
+     */
+     
+     //bam button de hien thi tu 0- 9 
+void hienthi(int i){
+        if (i == 0 ){
+            PORTF = 0x80;
+            PORTD = 0xF9;
+            PORTA = 0x7F;
+        } 
+        if (i == 1 ){
+            PORTF = 0x86;
+            PORTD = 0xFF;
+            PORTA = 0x7F;
+        }  
+        if (i == 2 ){
+            PORTF = 0x84;
+            PORTD = 0xF1;
+            PORTA = 0xFF;
+        }  
+        if (i == 3 ){
+            PORTF = 0x84;
+            PORTD = 0xF5;
+            PORTA = 0x7F;
+        }  
+        if (i == 4 ){
+            PORTF = 0x82;
+            PORTD = 0xF7;
+            PORTA = 0x7F;
+        }  
+        if (i == 5 ){
+            PORTF = 0xA0;
+            PORTD = 0xF5;
+            PORTA = 0x7F;
+        }  
+        if (i == 6 ){
+            PORTF = 0b10100000 + 0b00000001;   
+            PORTD = 0xF1; 
+            PORTA = 0x7F;
+        }  
+        if (i == 7 ){
+            PORTF = 0x84;
+            PORTD = 0xFF;
+            PORTA = 0x7F;
+        }  
+        if (i == 8 ){
+            PORTF = 0x80;
+            PORTD = 0xF1;
+            PORTA = 0x7F;
+        }  
+        if (i == 9 ){
+            PORTF = 0x80;
+            PORTD = 0xF5;
+            PORTA = 0x7F;
+        }   
+        
+        delay_ms(250);
+        PORTF = 0xA6;
+        PORTD = 0xFF;
+        PORTA = 0xFF;
+}
+void main(void){
+    int count=0;
+    DDRB = 0x00;
+    DDRF = 0xFF;
+    DDRD = 0xFF;
+    DDRA = 0xFF;
+    PORTB = 0x04;
+    while (1)
+        {
+        if (BT1 == 0){
+            count++;
+        }
+        count%=10;
+        hienthi(count);  // E,F,G muon tac dong bit thi phai tac dong theo ca thanh ghi
+        
+
+        }
+}

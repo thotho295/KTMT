@@ -1,0 +1,9 @@
+VERSION:3 SOURCE_TIMESTAMP:5367B328
+NODE:I LEVEL:0 LINE:9 "D:\KienTrucMayTinh\Nhom2\robot_new\Code_vison_32\inc\io.h"
+NODE:I LEVEL:0 LINE:10 "D:\KienTrucMayTinh\Nhom2\robot_new\Code_vison_32\inc\alcd.h"
+NODE:I LEVEL:0 LINE:11 "D:\KienTrucMayTinh\Nhom2\robot_new\Code_vison_32\inc\delay.h"
+NODE:M LEVEL:0 LINE:12 "BT1"
+NODE:M LEVEL:0 LINE:13 "BT2"
+NODE:M LEVEL:0 LINE:14 "BT3"
+NODE:M LEVEL:0 LINE:15 "BL"
+NODE:F LEVEL:0 LINE:17 "main(void)"

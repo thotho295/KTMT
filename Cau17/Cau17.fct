@@ -1,0 +1,7 @@
+main DSTACK_USAGE:22 DSTACK_LEVEL:22 FILE:"Cau17.c" LINE:106
+sprintf DSTACK_USAGE:14 DSTACK_LEVEL:36 FILE:"" LINE:1462
+_print DSTACK_USAGE:20 DSTACK_LEVEL:56 FILE:"" LINE:533
+strlen DSTACK_USAGE:2 DSTACK_LEVEL:58 FILE:"..\..\Nhom2\robot_new\Code_vison_32\lib\string.lib" LINE:1706
+timer0_ovf_isr DSTACK_USAGE:12 DSTACK_LEVEL:70 FILE:"Cau17.c" LINE:29
+rtc_set_date DSTACK_USAGE:4 DSTACK_LEVEL:74 FILE:"..\..\Nhom2\robot_new\Code_vison_32\lib\ds1307.lib" LINE:91
+bin2bcd DSTACK_USAGE:1 DSTACK_LEVEL:75 FILE:"..\..\Nhom2\robot_new\Code_vison_32\lib\bcd.lib" LINE:28

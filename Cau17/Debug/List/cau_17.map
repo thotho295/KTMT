@@ -1,0 +1,53 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+cache_position                                                                    0x0500       8
+year                                                                              0x0508       2
+option                                                                            0x050A       2
+counter                                                                           0x050C       2
+reset_counter                                                                     0x050E       2
+delay_counter                                                                     0x0510       2
+show_lcd_counter                                                                  0x0512       2
+show_led_counter                                                                  0x0514       2
+line_1                                                                            0x0516      16
+line_2                                                                            0x0526      16
+_base_y                                                                           0x0536       4
+_lcd_x                                                                            0x053A       1
+_lcd_y                                                                            0x053B       1
+_lcd_maxx                                                                         0x053C       1
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+minute                                                                            R4,R5        2
+second                                                                            R6,R7        2
+hour                                                                              R8,R9        2
+day                                                                               R10,R11      2
+month                                                                             R12,R13      2
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+is_leap_year                                                                      0x00090     28
+day_in_month_of_year                                                              0x000AC    100
+show_lcd                                                                          0x00110     58
+show_led                                                                          0x0014A    143
+timer0_ovf_isr                                                                    0x001D9    484
+clean_up                                                                          0x003BD     64
+main                                                                              0x003FD    202
+_lcd_write_nibble_G100                                                            0x004C7     37
+_lcd_write_data                                                                   0x004EC     12
+lcd_gotoxy                                                                        0x004F8     17
+lcd_clear                                                                         0x00509     14
+lcd_putchar                                                                       0x00517     32
+lcd_puts                                                                          0x00537     17
+lcd_init                                                                          0x00548     48
+put_buff_G101                                                                     0x00578     58
+_print_G101                                                                       0x005B2    308
+sprintf                                                                           0x006E6     52
+strlen                                                                            0x0071A     12
+strlenf                                                                           0x00726     13

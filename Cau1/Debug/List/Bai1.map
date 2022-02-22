@@ -1,0 +1,48 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+keypad                                                                            0x0501      18
+temp                                                                              0x0513       5
+data                                                                              0x0518       5
+password                                                                          0x051D       5
+buffer                                                                            0x0522      16
+_base_y                                                                           0x0532       4
+_seed                                                                             0x0536       4
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+count                                                                             R5           1
+count1                                                                            R4           1
+x                                                                                 R7           1
+dem                                                                               R6           1
+dem1                                                                              R9           1
+flag                                                                              R8           1
+_lcd_x                                                                            R11          1
+_lcd_y                                                                            R10          1
+_lcd_maxx                                                                         R13          1
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+BUTTON                                                                            0x000AE     84
+timer0_ovf_isr                                                                    0x00102     40
+main                                                                              0x0012A    108
+_lcd_write_nibble_G100                                                            0x00196     37
+_lcd_write_data                                                                   0x001BB     12
+lcd_gotoxy                                                                        0x001C7     13
+lcd_clear                                                                         0x001D4     12
+lcd_putchar                                                                       0x001E0     21
+lcd_puts                                                                          0x001F5     17
+lcd_init                                                                          0x00206     47
+put_buff_G101                                                                     0x00235     63
+_print_G101                                                                       0x00274    308
+sprintf                                                                           0x003A8     52
+memset                                                                            0x003DC     16
+strcmp                                                                            0x003EC     20
+strlen                                                                            0x00400     12
+strlenf                                                                           0x0040C     13

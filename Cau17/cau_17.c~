@@ -1,0 +1,17 @@
+/*
+ * cau_17.c
+ *
+ * Created: 1/19/2022 10:37:06 PM
+ * Author: nguye
+ */
+
+#include <io.h>
+
+void main(void)
+{
+while (1)
+    {
+    // Please write your application code here
+
+    }
+}
